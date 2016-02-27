@@ -12,5 +12,8 @@
         {% endif %}
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaks }}</p>
-    </div>
+        <p class="like-stuff">How many people like this?? {{ post.likes }} <br>
+          Like it now! <a class="btn btn-default" href="{% url 'post_like' pk=post.pk %}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+        </p>
+  </div>
 {% endblock %}
